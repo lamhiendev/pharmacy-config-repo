@@ -11,3 +11,9 @@ app:
   hotline: 19001234
 pharmacy:
   vat-rate: 0.1
+resilience4j:
+  circuitbreaker:
+    instances:
+      warehouseCB:
+        failureRateThreshold: 50
+        waitDurationInOpenState: 20s

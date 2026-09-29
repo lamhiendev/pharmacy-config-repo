@@ -15,7 +15,7 @@ spring:
       value-serializer: org.springframework.kafka.support.serializer.JacksonJsonSerializer
       properties:
         # Cấu hình đính kèm thông tin Type Class vào Header (giúp Consumer deserialize dễ dàng)
-        spring.json.add.type.headers: true
+        spring.json.add.type.headers: false
 app:
   branch-name: "Nha Thuoc So 1"
   hotline: 19001234

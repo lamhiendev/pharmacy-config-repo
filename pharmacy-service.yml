@@ -6,6 +6,16 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+  kafka:
+    bootstrap-servers: localhost:9094 # Hoặc localhost:9092 tùy theo port Kafka Broker của bạn
+    producer:
+      # Key Serializer là StringSerializer để gửi medicineId làm Message Key
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      # Value Serializer là JsonSerializer để tự động convert đối tượng Java sang JSON
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        # Cấu hình đính kèm thông tin Type Class vào Header (giúp Consumer deserialize dễ dàng)
+        spring.json.add.type.headers: true
 app:
   branch-name: "Nha Thuoc So 1"
   hotline: 19001234

@@ -12,7 +12,7 @@ spring:
       # Key Serializer là StringSerializer để gửi medicineId làm Message Key
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       # Value Serializer là JsonSerializer để tự động convert đối tượng Java sang JSON
-      value-serializer: org.springframework.kafka.support.serializer.JacksonJsonDeserializer
+      value-serializer: org.springframework.kafka.support.serializer.JacksonJsonSerializer
       properties:
         # Cấu hình đính kèm thông tin Type Class vào Header (giúp Consumer deserialize dễ dàng)
         spring.json.add.type.headers: true

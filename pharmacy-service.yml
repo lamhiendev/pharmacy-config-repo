@@ -7,7 +7,7 @@ spring:
     hibernate:
       ddl-auto: update
   kafka:
-    bootstrap-servers: localhost:9094 # Hoặc localhost:9092 tùy theo port Kafka Broker của bạn
+    bootstrap-servers: localhost:9092 # Hoặc localhost:9092 tùy theo port Kafka Broker của bạn
     producer:
       # Key Serializer là StringSerializer để gửi medicineId làm Message Key
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
